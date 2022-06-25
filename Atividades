@@ -103,5 +103,44 @@ print(conta1.conta)
 print(conta1.saldo)
 print(conta1.favorecido)
 
+Atividade 06
+Agora que já temos o método para depositar um valor, realize uma sequência de depósitos e, por fim, imprima o saldo em tela.
+
+class ContaCorrente:
+    def __init__(self, agencia, conta, saldo, favorecido):
+        self.agencia = agencia
+        self.conta = conta
+        self.saldo = saldo
+        self.favorecido = favorecido
+        
+    def depositaValor(self, valor):
+        if valor > 0:
+            self.saldo += valor
+        else:
+            print('Valor inválido')
+            
+agencia = input('Agência: ')
+conta = input('Conta: ')
+saldo = 0.0
+favorecido = input('Favorecido: ')
+
+conta1 = ContaCorrente(agencia, conta, saldo, favorecido)
+
+for i in range(0, 3):
+    valor = float(input('Depósito: '))
+    conta1.depositaValor(valor)
+
+print(conta1.agencia)
+print(conta1.conta)
+print(conta1.saldo)
+print(conta1.favorecido)
+
+Atividade 07
+Utilizando a classe criada durante a aula, vamos realizar os seguintes processos:
+- Inicializar duas contas diferentes;
+- Realizar uma sequência de depósitos e saques nas duas contas;
+- Implementar um método de transferência e realizar uma entre as contas criadas.
+- Implementar um novo método que irá apresentar as informações da conta em tela
+
 
 
